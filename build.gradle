@@ -28,8 +28,8 @@ dependencies {
 	runtimeOnly 'com.mysql:mysql-connector-j'
 
 	//security
-	implementation 'org.springframework.boot:spring-boot-starter-security'
-	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
+	//implementation 'org.springframework.boot:spring-boot-starter-security'
+	//implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
 
 	//springboot
 	implementation 'org.springframework.boot:spring-boot-starter-web'
