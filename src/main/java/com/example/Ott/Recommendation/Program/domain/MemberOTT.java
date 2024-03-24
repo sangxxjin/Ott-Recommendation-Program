@@ -13,6 +13,8 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 @Entity
 @Data
@@ -32,10 +34,11 @@ public class MemberOTT {
   @JoinColumn(name = "member_id")
   private Member member;
 
-  @Column(name = "created_at")
+  @CreationTimestamp
+  @Column(name = "created_at", updatable = false, nullable = false)
   private LocalDateTime createdAt;
 
-  @Column(name = "last_modified_at")
+  @UpdateTimestamp
+  @Column(name = "last_modified_at", nullable = false)
   private LocalDateTime lastModifiedAt;
-
 }
