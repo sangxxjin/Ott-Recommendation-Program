@@ -1,6 +1,7 @@
 package com.example.Ott.Recommendation.Program.controller;
 
-import com.example.Ott.Recommendation.Program.Dto.SignRequest;
+import com.example.Ott.Recommendation.Program.dto.SignRequest;
+import com.example.Ott.Recommendation.Program.dto.SignResponse;
 import com.example.Ott.Recommendation.Program.service.MemberService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -18,5 +19,11 @@ public class MemberController {
   public ResponseEntity<Boolean> join(@RequestBody SignRequest request) {
     return new ResponseEntity<>(memberService.join(request), HttpStatus.OK);
   }
+
+  @PostMapping("/login")
+  public ResponseEntity<SignResponse> login(@RequestBody SignRequest request) {
+    return new ResponseEntity<>(memberService.login(request), HttpStatus.OK);
+  }
+
 
 }
