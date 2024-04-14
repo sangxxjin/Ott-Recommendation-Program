@@ -30,6 +30,8 @@ public class Member {
   private String phone;
   private String password;
   private String nickname;
+  private String refreshToken;
+  private String accessToken;
 
   @CreationTimestamp
   @Column(name = "created_at", updatable = false, nullable = false)

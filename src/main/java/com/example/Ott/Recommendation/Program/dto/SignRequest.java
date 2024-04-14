@@ -1,4 +1,4 @@
-package com.example.Ott.Recommendation.Program.Dto;
+package com.example.Ott.Recommendation.Program.dto;
 
 import lombok.Getter;
 import lombok.Setter;
